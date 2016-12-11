@@ -5,11 +5,18 @@
   <title>D3 Work</title>
     <script type="text/javascript" src="d3/d3.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script> 
+      function draw(data) {
+        "use strict"
+        // visualization
+        console.log(data);
+      }
+    </script>
   </head>
   <body>
     <h1> D3 Work </h1>
-    <div id="body">
-    
-    </div>
+    <script>
+      d3.json("data/test_data.json" , draw);
+    </script>
   </body>
 </html>
