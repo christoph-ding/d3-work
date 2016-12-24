@@ -5,8 +5,12 @@ body {
   font-family: "Helvetica Neue", Helvetica;
 }
 
-#chart {
+.chart {
   position: absolute;
   top: 50px;
   left: 100px;
 } 
+
+.bar {
+
+}
