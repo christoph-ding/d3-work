@@ -3,32 +3,31 @@ function displayData(data) {
   console.log('displaying data: ...');
   console.log(data);
 
+  var widthCanvas = 350;
+  var heightCanvas = 350;
+
   var canvas = d3.select(".chart")
-                 .selectAll()
-                 .data(data)
-                 .enter()
-                 .append("p")
-                 .style("width", function(d) { return d.age * 10 + "px"; })
-                 .style("height", 100 + 'px')                 
-                 .style("background-color", "blue");
 
-  var bars;
-  var axis;
-  var title;
+  var maxDomainX = d3.max(data, function(d) {
+    return d[0];
+  });
 
-  var makeAxis = function(chartElement, data) {
+  var maxDomainY = d3.max(data, function(d) {
+    return d[1];
+  })
 
-  }
+  var xScale = d3.scale.linear()
+                       .domain([0, maxDomainX])
+                       .range([0, widthCanvas])
 
-  var addBars = function(chartElement, data) {
+  var yScale = d3.scale.linear()
+                       .domain([0, maxDomainY])
+                       .range([0, heightCanvas])
 
-  }
+  // var xAxis = d3.svg.axis()
+  //       .scale(xScale)
 
-  var consumeData = function(dataSource) {
+  // canvas.append("g")
+  //       .call(xAxis)
 
-  }
-
-  var determineAxisBounds = function(data, ticks) {
-
-  }
 }
